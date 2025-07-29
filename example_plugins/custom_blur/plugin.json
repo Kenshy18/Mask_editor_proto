@@ -1,0 +1,15 @@
+{
+  "name": "custom_blur",
+  "version": "1.0.0",
+  "description": "Advanced blur effects including motion, radial, zoom, and tilt-shift",
+  "author": "Mask Editor GOD Team",
+  "entry_point": "__init__",
+  "dependencies": [],
+  "requirements": [
+    "opencv-python>=4.5.0",
+    "numpy>=1.20.0"
+  ],
+  "tags": ["effect", "blur", "advanced"],
+  "min_app_version": "0.1.0",
+  "max_app_version": null
+}

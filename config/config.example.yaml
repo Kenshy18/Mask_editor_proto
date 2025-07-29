@@ -1,0 +1,48 @@
+# Mask Editor GOD 設定ファイル例
+# このファイルを ~/.config/mask_editor_god/config.yaml にコピーして使用してください
+
+# コンポーネント設定
+components:
+  # ビデオ読み込み設定
+  video_reader:
+    backend: "pyav"  # 利用可能: pyav, cpp (C++実装が利用可能な場合)
+    options: {}
+  
+  # ビデオ書き出し設定
+  video_writer:
+    backend: "pyav"  # 利用可能: pyav, cpp
+    options:
+      stream_copy: true  # ストリームコピーを優先使用（再エンコードなし）
+  
+  # マスク処理設定
+  mask_processor:
+    backend: "opencv"  # 利用可能: opencv, cpp
+    options: {}
+  
+  # プロジェクト管理設定
+  project_repository:
+    backend: "json"  # 利用可能: json
+    options: {}
+
+# パフォーマンス設定
+performance:
+  thread_count: 4  # 処理スレッド数
+  gpu_enabled: true  # GPU高速化を有効化
+  cache_size: 100  # フレームキャッシュサイズ
+
+# パス設定
+paths:
+  config_dir: "~/.config/mask_editor_god"  # 設定ディレクトリ
+  cache_dir: "~/.cache/mask_editor_god"  # キャッシュディレクトリ
+  temp_dir: "/tmp/mask_editor_god"  # 一時ファイルディレクトリ
+
+# UI設定（オプション）
+ui:
+  theme: "default"  # UIテーマ
+  default_language: "ja"  # デフォルト言語（ja, en, zh）
+  font_size: 10  # フォントサイズ
+
+# デバッグ設定（オプション）
+debug:
+  enable_profiling: false  # プロファイリングを有効化
+  save_intermediate_results: false  # 中間結果を保存
